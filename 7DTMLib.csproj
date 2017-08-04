@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EDC9EE9D-1993-416A-979B-8C110BDCCA97}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SDTM</RootNamespace>
+    <AssemblyName>7DTMLib</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\7d-mod-binaries\git\7dtmlib\7dtmlib</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>..\7d-mod-binaries\git\7dtmlib\7dtmlib</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>..\7d-binaries\latest\System.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\7d-binaries\latest\Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LogLibrary">
+      <HintPath>..\7d-binaries\latest\LogLibrary.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>..\7d-binaries\latest\System.Xml.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\7d-binaries\latest\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\7d-binaries\latest\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="API.cs" />
+    <Compile Include="src\Events\Events.cs" />
+    <Compile Include="src\Permissions\Permissions.cs" />
+    <Compile Include="src\Utils\PlayerUtils.cs" />
+    <Compile Include="src\Utils\ItemUtils.cs" />
+    <Compile Include="src\Utils\WorldUtils.cs" />
+    <Compile Include="src\Utils\EntityUtils.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\Data\XMLConfig.cs" />
+    <Compile Include="src\Utils\FileUtils.cs" />
+    <Compile Include="src\Data\ModDataXML.cs" />
+    <Compile Include="src\Data\ModDataProperty.cs" />
+    <Compile Include="COLORS.cs" />
+    <Compile Include="src\Events\EntityWellnessChangedHandler.cs" />
+    <Compile Include="src\Events\EntityBuffChangedHandler.cs" />
+    <Compile Include="src\Events\TileEntityChangedHandler.cs" />
+    <Compile Include="src\Permissions\PermissionList.cs" />
+    <Compile Include="src\Permissions\PermissionGroup.cs" />
+    <Compile Include="src\Permissions\PermissionUser.cs" />
+    <Compile Include="src\Commands\ConsoleCmdExPerm.cs" />
+    <Compile Include="src\Events\GamePrefChangedHandler.cs" />
+    <Compile Include="src\Utils\BlockUtils.cs" />
+    <Compile Include="src\Utils\CommandUtils.cs" />
+    <Compile Include="src\Commands\ConsoleCmdSetConf.cs" />
+    <Compile Include="src\Commands\ConsoleCmdExpermSuper.cs" />
+    <Compile Include="src\ChatCommands\ChatCmdHelp.cs" />
+    <Compile Include="src\ChatCommand.cs" />
+    <Compile Include="src\Events\InventoryChangedHandler.cs" />
+    <Compile Include="src\Events\InventoryGridChangeHandler.cs" />
+    <Compile Include="src\Events\TEWorkstationChangedHandler.cs" />
+    <Compile Include="src\Events\TELootContainerChangedHandler.cs" />
+    <Compile Include="src\Data\Region.cs" />
+    <Compile Include="src\Events\EntityUINotificationChangedHandler.cs" />
+    <Compile Include="src\Commands\ConsoleCmdBloodMoon.cs" />
+    <Compile Include="src\Events\ChunkCallbackHandler.cs" />
+    <Compile Include="src\Commands\ConsoleCmdResetTrader.cs" />
+    <Compile Include="src\Events\TENPCChangedHandler.cs" />
+    <Compile Include="src\Servers\WWW.cs" />
+    <Compile Include="src\Servers\WWWEndpointProvider.cs" />
+    <Compile Include="src\Servers\WWWResponse.cs" />
+    <Compile Include="src\Servers\WWWRequest.cs" />
+    <Compile Include="src\Servers\Endpoints\EndPoint_Home.cs" />
+    <Compile Include="src\Servers\Endpoints\EndPoint_PasswordLogin.cs" />
+    <Compile Include="src\Servers\WWWUser.cs" />
+    <Compile Include="src\Servers\Endpoints\EndPoint_SteamLogin.cs" />
+    <Compile Include="src\Data\JSON.cs" />
+    <Compile Include="src\Servers\Endpoints\EndPoint_Settings.cs" />
+    <Compile Include="src\Servers\Endpoints\Endpoint_ExpermSettings.cs" />
+    <Compile Include="src\Servers\Endpoints\EndPoint_ChatCommands.cs" />
+    <Compile Include="src\Servers\Endpoints\EndPoint_ExpermGroup.cs" />
+    <Compile Include="src\Servers\Endpoints\EndPoint_OnlinePlayers.cs" />
+    <Compile Include="src\Servers\Endpoints\EndPoint_ExpermUser.cs" />
+    <Compile Include="src\Servers\Endpoints\EndPoint_ExPermRemoveGroupNode.cs" />
+    <Compile Include="src\Servers\Endpoints\EndPoint_ExPermRemoveUserNode.cs" />
+    <Compile Include="src\Servers\Endpoints\EndPoint_ExPermAddGroupNode.cs" />
+    <Compile Include="src\Servers\Endpoints\EndPoint_ExPermAddUserNode.cs" />
+    <Compile Include="src\Commands\ConsoleCmdIntegratedWeb.cs" />
+    <Compile Include="src\Commands\ConsoleCmdChatCommands.cs" />
+    <Compile Include="src\Events\TEPowerSourceChangedHandler.cs" />
+    <Compile Include="src\Events\TEPoweredBlockChangedHandler.cs" />
+    <Compile Include="src\Events\TEPoweredTriggerChangedHandler.cs" />
+    <Compile Include="src\Events\TEPoweredChangedHandler.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="src\" />
+    <Folder Include="src\Data\" />
+    <Folder Include="src\Utils\" />
+    <Folder Include="src\Commands\" />
+    <Folder Include="src\ChatCommands\" />
+    <Folder Include="src\Servers\" />
+    <Folder Include="src\Servers\Endpoints\" />
+    <Folder Include="html\" />
+    <Folder Include="src\Localization\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ModInfo.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="html\tpl_main.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="html\tpl_menu.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="html\tpl_menuitem.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="html\tpl_loginform.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="html\tpl_steambutton.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="html\tpl_settingsmain.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="html\tpl_settingsmenu.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="html\tpl_settingsmenuitem.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="html\tpl_settingsform.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="html\tpl_expermsettings.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="html\tpl_expermgrouplist.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="html\tpl_expermuserlist.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="html\tpl_expermuserlistitem.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="html\tpl_expermgrouplistitem.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="html\tpl_expermnodelist.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="html\tpl_expermnodelistitem.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="html\tpl_expermgroup.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="html\tpl_onlineplayerlist.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="html\tpl_onlineplayerlistitem.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="html\tpl_expermuser.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="html\tpl_expermpermissionentry.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="html\tpl_expermgroupremovenode.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="html\tpl_expermuserremovenode.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
