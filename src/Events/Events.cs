@@ -192,8 +192,8 @@ namespace SDTM
 //		public event OnWorkstationBurnTimeChangedDelegate OnWorkstationBurnTimeChanged;
 //
 		//LootContainer Events
-		public event OnLootContainerTouchedChangedDelegate OnLootContainerTouchChanged;
-		public event OnLootContainerOpenedTimeChangedDelegate OnLootContainerOpenedTimeChanged;
+		//public event OnLootContainerTouchedChangedDelegate OnLootContainerTouchChanged;
+		//public event OnLootContainerOpenedTimeChangedDelegate OnLootContainerOpenedTimeChanged;
 		public event OnLootContainerItemChangedDelegate OnLootContainerItemChanged;
 
 		//PowerSource Events

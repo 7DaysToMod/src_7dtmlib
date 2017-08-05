@@ -4,10 +4,10 @@ namespace SDTM
 {
 	public class TEPowerSourceChangedHandler: TEPoweredChangedHandler
 	{
-		private bool isOn = false;
-		private ushort currentFuel = 0;
-		private int powerUsed = 0;
-		private ushort maxOutput = 0;
+		//private bool isOn = false;
+		//private ushort currentFuel = 0;
+		//private int powerUsed = 0;
+		//private ushort maxOutput = 0;
 
 		public TEPowerSourceChangedHandler(TileEntity _te):base(_te){
 //			TileEntityPowerSource powerSource = _te as TileEntityPowerSource;

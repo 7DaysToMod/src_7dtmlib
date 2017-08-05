@@ -235,9 +235,7 @@ namespace SDTM.Data
 			}
 
 			if (this.rotations > 0) {
-				for (var rot = 0; rot > this.rotations; rot++) {
-					prefabClone.RotateY (false);
-				}
+				prefabClone.RotateY (false, this.rotations);
 			}
 
 			prefabClone.CopyIntoLocal(GameManager.Instance.World.ChunkClusters[0], new Vector3i(pos.x, pos.y, pos.z), true, true);
@@ -322,10 +320,9 @@ namespace SDTM.Data
 			bool rotateLeft = false;//rotations < 0;
 
 			int numRotations = System.Math.Abs(rotations);
-
-			for (int i = 0; i < numRotations; i++) {
-				selectionPrefab.RotateY (rotateLeft);
-			}
+            
+			selectionPrefab.RotateY (rotateLeft, numRotations);
+			
 
 			return true;
 		}

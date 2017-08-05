@@ -484,7 +484,7 @@ namespace SDTM
 					Servers.HTTP.EndPointsList.RegisterEndpoint ("/settings/experm/user/removenode/", new Servers.EndPoints.EndPoint_ExPermRemoveUserNode ());
 					Servers.HTTP.EndPointsList.RegisterEndpoint ("/settings/experm/user/addnode/", new Servers.EndPoints.EndPoint_ExPermAddUserNode ());
 					Servers.HTTP.EndPointsList.RegisterEndpoint ("/settings/onlineplayers/", new Servers.EndPoints.EndPoint_OnlinePlayers ());
-
+                    Log.Out("STARTING SERVER");
 					this.webServer = new Servers.HTTP.WWW ("*", WebConsolePort);
 					this.webServer.Run ();
 				}

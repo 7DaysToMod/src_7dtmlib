@@ -6,7 +6,7 @@ namespace SDTM
 	public class TELootContainerChangedHandler:ITileEntityChangedListener
 	{
 		private ulong lastTouched;
-		private float lastOpened;
+		//private float lastOpened;
 
 		KeyValuePair<ItemValue, int>[] items;
 
