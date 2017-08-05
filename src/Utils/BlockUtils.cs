@@ -55,15 +55,10 @@ namespace SDTM
 			if (w == null) {
 				return BlockValue.Air;
 			}
-
-			BlockValue? bvn = GameManager.Instance.World.GetBlock (pos);
-			BlockValue bv;
-			if (bvn == null) {
-				return BlockValue.Air;
-			} else {
-				bv = (BlockValue) bvn;
-				return bv;
-			}
+            
+            BlockValue bv = GameManager.Instance.World.GetBlock(pos);
+            
+            return bv;
 		}
 
 		public static bool SetBlock(int _x, int _y, int _z, string blockNameOrId, int rotation=0){
